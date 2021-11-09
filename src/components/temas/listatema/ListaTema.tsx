@@ -14,9 +14,10 @@ function ListaTema() {
   let history = useHistory();
 
   useEffect(()=>{
-    if(token == '')
-      alert("Você precisa estar logado")
-      history.push("/login")
+    if(token == ''){
+      
+    }
+      
   }, [token])
 
   async function getTema(){
@@ -48,14 +49,14 @@ function ListaTema() {
           <CardActions>
             <Box display="flex" justifyContent="center" mb={1.5} >
 
-              <Link to={'/formularioTema/${tema.id}'} className="text-decorator-none">
+              <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="marginLeft" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
-              <Link to={'/deletarTema/${tema.id}'} className="text-decorator-none">
+              <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" size='small' color="secondary">
                     deletar

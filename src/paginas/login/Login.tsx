@@ -29,7 +29,7 @@ function Login() {
         }
 
         useEffect(()=>{
-            if(token != ''){
+            if(token !== ''){
                 history.push('/home')
             }
         }, [token])
